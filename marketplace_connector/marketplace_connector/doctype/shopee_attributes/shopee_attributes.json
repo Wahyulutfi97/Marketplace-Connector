@@ -1,0 +1,44 @@
+{
+ "creation": "2021-07-05 10:50:43.644633",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "attribute_id",
+  "attribute_name",
+  "attribute_values"
+ ],
+ "fields": [
+  {
+   "fieldname": "attribute_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Attribute ID",
+   "options": "Shopee Attribute"
+  },
+  {
+   "fetch_from": "attribute_id.attribute_name",
+   "fieldname": "attribute_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attribute Name"
+  },
+  {
+   "fetch_from": "attribute_id.attribute_value",
+   "fieldname": "attribute_values",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attribute Value"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-12 11:31:18.473810",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Shopee Attributes",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

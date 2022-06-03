@@ -1,0 +1,34 @@
+{
+ "creation": "2021-08-05 11:18:07.793346",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "variation_of",
+  "stock"
+ ],
+ "fields": [
+  {
+   "fieldname": "variation_of",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variation Of"
+  },
+  {
+   "fieldname": "stock",
+   "fieldtype": "Data",
+   "label": "Stock"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-05 13:23:44.027966",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Variation Shopee",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

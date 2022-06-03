@@ -1,0 +1,49 @@
+{
+ "creation": "2021-08-09 10:07:04.815451",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "variant_1",
+  "variant_2",
+  "stock",
+  "harga"
+ ],
+ "fields": [
+  {
+   "fieldname": "variant_1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant 1"
+  },
+  {
+   "fieldname": "variant_2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant 2"
+  },
+  {
+   "fieldname": "stock",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stock"
+  },
+  {
+   "fieldname": "harga",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Harga"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-09 11:25:57.305848",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Item Shopee Variant",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

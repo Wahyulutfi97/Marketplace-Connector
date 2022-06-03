@@ -1,0 +1,58 @@
+{
+ "autoname": "field:category_id",
+ "creation": "2021-06-18 09:51:02.815008",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "category_id",
+  "shopee_attributes"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "category_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "shopee_attributes",
+   "fieldtype": "Table",
+   "label": "Shopee Attributes",
+   "options": "Shopee Attributes"
+  }
+ ],
+ "modified": "2021-07-05 10:53:35.298858",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Category Shopee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "name1",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

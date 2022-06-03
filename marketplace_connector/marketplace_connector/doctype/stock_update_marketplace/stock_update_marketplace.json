@@ -1,0 +1,102 @@
+{
+ "autoname": "format:SUM-{marketplace}-{#####}",
+ "creation": "2021-10-05 10:04:28.170453",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "posting_time",
+  "nama_warehouse_shopee",
+  "generate_stock",
+  "section_break_5",
+  "items",
+  "amended_from",
+  "list_item_tokopedia_section",
+  "item_stock_tokopedia"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "List Item Shopee"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Item Stock Update"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Stock Update Marketplace",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "list_item_tokopedia_section",
+   "fieldtype": "Section Break",
+   "label": "List Item Tokopedia"
+  },
+  {
+   "fieldname": "item_stock_tokopedia",
+   "fieldtype": "Table",
+   "label": "Item Stock Tokopedia",
+   "options": "Item Stock Tokopedia"
+  },
+  {
+   "fieldname": "nama_warehouse_shopee",
+   "fieldtype": "Link",
+   "label": "Nama Warehouse ",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "generate_stock",
+   "fieldtype": "Button",
+   "label": "Generate Stock"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-10-26 12:40:59.060458",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Stock Update Marketplace",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

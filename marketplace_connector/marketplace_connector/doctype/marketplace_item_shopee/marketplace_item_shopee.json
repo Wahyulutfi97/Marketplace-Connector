@@ -1,0 +1,416 @@
+{
+ "autoname": "format:SHOPEE-{MM}-{YYYY}-{#####}",
+ "creation": "2021-08-12 10:19:16.990332",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status_sync",
+  "shop_name",
+  "type",
+  "parent_id",
+  "item_code",
+  "shopee_product_id",
+  "bobot",
+  "warehouse",
+  "price_list",
+  "addupdate_product",
+  "hapus_product_dari_shopee",
+  "general_info_product",
+  "nama_product",
+  "deskripsi_product",
+  "harga_product",
+  "stock_product",
+  "category",
+  "category_name",
+  "add_attribute",
+  "shopee_item_attribute",
+  "condition",
+  "pre_order",
+  "days_to_ship",
+  "status",
+  "column_break_22",
+  "preview_gambar_product_1",
+  "gambar_1",
+  "preview_gambar_product_2",
+  "gambar_2",
+  "preview_gambar_product_3",
+  "gambar_3",
+  "preview_gambar_product_4",
+  "gambar_4",
+  "preview_gambar_product_5",
+  "gambar_5",
+  "preview_gambar_product_6",
+  "gambar_6",
+  "preview_gambar_product_7",
+  "gambar_7",
+  "preview_gambar_product_8",
+  "gambar_8",
+  "variant_section",
+  "variant_type_1",
+  "variant_type_2",
+  "variant_1",
+  "variant_2",
+  "gabung_variant",
+  "tabel_gabung_variant",
+  "add_variant",
+  "section_break_11",
+  "berat_product",
+  "lebar_product",
+  "panjang_product",
+  "tinggi_product",
+  "logistic"
+ ],
+ "fields": [
+  {
+   "default": "Product",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nTemplate\nProduct"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "variant_1",
+   "fieldtype": "Table",
+   "label": "Variant 1",
+   "options": "Tabel Variant Shopee 1"
+  },
+  {
+   "fieldname": "variant_2",
+   "fieldtype": "Table",
+   "label": "Variant 2",
+   "options": "Tabel Variant Shopee 2"
+  },
+  {
+   "fieldname": "variant_type_1",
+   "fieldtype": "Data",
+   "label": "Variant Type 1"
+  },
+  {
+   "depends_on": "eval:doc.type !== \"Product Variant\"",
+   "fieldname": "variant_type_2",
+   "fieldtype": "Data",
+   "label": "Variant Type 2"
+  },
+  {
+   "fieldname": "tabel_gabung_variant",
+   "fieldtype": "Table",
+   "label": "Tabel Gabung Variant",
+   "options": "Table Gabung Variant Shopee"
+  },
+  {
+   "fieldname": "logistic",
+   "fieldtype": "Table",
+   "label": "Logistic",
+   "options": "List Logistic Shopee",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type !== \"Product Variant\"",
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Pengiriman"
+  },
+  {
+   "default": "0",
+   "fieldname": "shopee_product_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shopee Product ID"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product Variant\"",
+   "fieldname": "parent_id",
+   "fieldtype": "Data",
+   "label": "Parent ID"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "options": "Shopee Shop Setting"
+  },
+  {
+   "fieldname": "gabung_variant",
+   "fieldtype": "Button",
+   "label": "gabung variant"
+  },
+  {
+   "default": "No",
+   "fieldname": "status_sync",
+   "fieldtype": "Data",
+   "label": "Status Sync"
+  },
+  {
+   "depends_on": "eval:doc.type !== \"Product Variant\"",
+   "fieldname": "general_info_product",
+   "fieldtype": "Section Break",
+   "label": "Informasi Product"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "nama_product",
+   "fieldtype": "Data",
+   "label": "Nama Product"
+  },
+  {
+   "fieldname": "deskripsi_product",
+   "fieldtype": "Small Text",
+   "label": "Deskripsi Product"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product\"",
+   "description": "Dibutuhkan apabila ingin additem ke Shopee",
+   "fieldname": "harga_product",
+   "fieldtype": "Data",
+   "label": "Harga Product"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Product\"",
+   "description": "Dibutuhkan apabila ingin additem ke Shopee",
+   "fieldname": "stock_product",
+   "fieldtype": "Data",
+   "label": "Stock Product"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break",
+   "label": "<b>Gambar Product</b>"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Category Shopee"
+  },
+  {
+   "fetch_from": "category.name1",
+   "fieldname": "category_name",
+   "fieldtype": "Data",
+   "label": "Category Name"
+  },
+  {
+   "fieldname": "variant_section",
+   "fieldtype": "Section Break",
+   "label": "Variant"
+  },
+  {
+   "fieldname": "gambar_1",
+   "fieldtype": "Attach Image",
+   "label": "Gambar utama"
+  },
+  {
+   "fieldname": "gambar_2",
+   "fieldtype": "Attach Image",
+   "label": "Gambar 2"
+  },
+  {
+   "fieldname": "gambar_3",
+   "fieldtype": "Attach Image",
+   "label": "Gambar 3"
+  },
+  {
+   "fieldname": "gambar_4",
+   "fieldtype": "Attach Image",
+   "label": "Gambar 4"
+  },
+  {
+   "fieldname": "gambar_5",
+   "fieldtype": "Attach Image",
+   "label": "Gambar 5"
+  },
+  {
+   "fieldname": "gambar_6",
+   "fieldtype": "Attach Image",
+   "label": "Gambar 6"
+  },
+  {
+   "fieldname": "gambar_7",
+   "fieldtype": "Attach Image",
+   "label": "Gambar 7"
+  },
+  {
+   "fieldname": "gambar_8",
+   "fieldtype": "Attach Image",
+   "label": "Gambar 8"
+  },
+  {
+   "fieldname": "preview_gambar_product_1",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 1",
+   "options": "gambar_1"
+  },
+  {
+   "fieldname": "preview_gambar_product_2",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 2",
+   "options": "gambar_2"
+  },
+  {
+   "fieldname": "preview_gambar_product_3",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 3",
+   "options": "gambar_3"
+  },
+  {
+   "fieldname": "preview_gambar_product_4",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 4",
+   "options": "gambar_4"
+  },
+  {
+   "fieldname": "preview_gambar_product_5",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 5",
+   "options": "gambar_5"
+  },
+  {
+   "fieldname": "preview_gambar_product_6",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 6",
+   "options": "gambar_6"
+  },
+  {
+   "fieldname": "preview_gambar_product_7",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 7",
+   "options": "gambar_7"
+  },
+  {
+   "fieldname": "preview_gambar_product_8",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Product 8",
+   "options": "gambar_8"
+  },
+  {
+   "default": "1",
+   "fieldname": "berat_product",
+   "fieldtype": "Data",
+   "label": "Berat (dalam kg)"
+  },
+  {
+   "default": "1",
+   "fieldname": "lebar_product",
+   "fieldtype": "Data",
+   "label": "Lebar (dalam cm)"
+  },
+  {
+   "default": "1",
+   "fieldname": "panjang_product",
+   "fieldtype": "Data",
+   "label": "Panjang (dalam cm)"
+  },
+  {
+   "default": "1",
+   "fieldname": "tinggi_product",
+   "fieldtype": "Data",
+   "label": "Tinggi (dalam cm)"
+  },
+  {
+   "depends_on": "eval:doc.type !== \"Product Variant\"",
+   "fieldname": "addupdate_product",
+   "fieldtype": "Button",
+   "label": "Add/Update Product"
+  },
+  {
+   "fieldname": "shopee_item_attribute",
+   "fieldtype": "Table",
+   "label": "Shopee Item Attribute",
+   "options": "Shopee Item Attribute"
+  },
+  {
+   "fieldname": "add_attribute",
+   "fieldtype": "Button",
+   "label": "Add Attribute"
+  },
+  {
+   "depends_on": "eval:doc.type !== \"Product Variant\"",
+   "fieldname": "hapus_product_dari_shopee",
+   "fieldtype": "Button",
+   "label": "Hapus Product dari Shopee"
+  },
+  {
+   "default": "NEW",
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "label": "Condition",
+   "options": "NEW\nUSED"
+  },
+  {
+   "default": "NO",
+   "fieldname": "pre_order",
+   "fieldtype": "Select",
+   "label": "Pre Order",
+   "options": "NO\nYES"
+  },
+  {
+   "default": "NORMAL",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "NORMAL\nUNLIST\nBANNED"
+  },
+  {
+   "fieldname": "add_variant",
+   "fieldtype": "Button",
+   "label": "Add Variant to Shopee"
+  },
+  {
+   "depends_on": "eval:doc.pre_order == \"YES\"",
+   "fieldname": "days_to_ship",
+   "fieldtype": "Select",
+   "label": "Days to Ship",
+   "options": "7\n8\n9\n10\n11\n12\n13\n14\n15"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Item Price"
+  },
+  {
+   "fieldname": "bobot",
+   "fieldtype": "Int",
+   "label": "Bobot"
+  }
+ ],
+ "modified": "2022-05-24 09:17:25.348811",
+ "modified_by": "dev@wss.com",
+ "module": "Marketplace Connector",
+ "name": "Marketplace Item Shopee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "nama_product,shop_name,item_code,bobot",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nama_product",
+ "track_changes": 1
+}

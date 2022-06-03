@@ -1,0 +1,94 @@
+{
+ "creation": "2021-09-01 11:14:37.988703",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_id",
+  "item_name",
+  "type",
+  "variations",
+  "item_promotion_price",
+  "purchase_limit",
+  "amended_from",
+  "product_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item ID",
+   "options": "Marketplace Item Shopee"
+  },
+  {
+   "fieldname": "variations",
+   "fieldtype": "Data",
+   "label": "Variations"
+  },
+  {
+   "fieldname": "item_promotion_price",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Promotion Price ( dalam % )"
+  },
+  {
+   "fieldname": "purchase_limit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Purchase Limit"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Item Discount",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item_id.shopee_product_id",
+   "fieldname": "product_id",
+   "fieldtype": "Data",
+   "label": "Product ID"
+  },
+  {
+   "fetch_from": "item_id.nama_product",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fetch_from": "item_id.type",
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-09-01 16:10:22.805665",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Item Discount",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

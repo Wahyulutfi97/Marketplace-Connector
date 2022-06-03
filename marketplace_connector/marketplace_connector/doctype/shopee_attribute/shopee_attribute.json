@@ -1,0 +1,63 @@
+{
+ "allow_rename": 1,
+ "autoname": "format:{category_id}-{attribute_name}-{#####}",
+ "creation": "2021-07-12 11:22:08.502932",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category_id",
+  "attribute_id",
+  "attribute_name",
+  "attribute_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "attribute_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attribute ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attribute_value",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Attribute Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attribute_name",
+   "fieldtype": "Data",
+   "label": "Attribute Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category_id",
+   "fieldtype": "Data",
+   "label": "Category ID",
+   "reqd": 1
+  }
+ ],
+ "modified": "2021-07-12 14:45:38.042828",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Shopee Attribute",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

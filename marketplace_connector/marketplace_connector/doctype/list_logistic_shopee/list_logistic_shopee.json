@@ -1,0 +1,52 @@
+{
+ "creation": "2021-08-05 15:00:48.685685",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "id_logistik",
+  "nama_logistik",
+  "enable",
+  "mask_channel_id"
+ ],
+ "fields": [
+  {
+   "columns": 5,
+   "fieldname": "nama_logistik",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nama Logistik"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enable"
+  },
+  {
+   "fieldname": "id_logistik",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID Logistik"
+  },
+  {
+   "columns": 5,
+   "fieldname": "mask_channel_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "mask_channel_id"
+  }
+ ],
+ "istable": 1,
+ "modified": "2022-05-19 15:33:36.713385",
+ "modified_by": "dev@wss.com",
+ "module": "Marketplace Connector",
+ "name": "List Logistic Shopee",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

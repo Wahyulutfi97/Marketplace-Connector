@@ -1,0 +1,79 @@
+{
+ "creation": "2021-08-12 14:12:47.991067",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "variant_1",
+  "variant_2",
+  "item_code",
+  "product_id",
+  "preview_gambar_variant",
+  "gambar_variant",
+  "indexing_1",
+  "indexing_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "variant_1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant 1"
+  },
+  {
+   "fieldname": "variant_2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant 2"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "depends_on": "eval:(doc.indexing_2 == \"0\"|| doc.indexing_2 === undefined)",
+   "fieldname": "preview_gambar_variant",
+   "fieldtype": "Image",
+   "label": "Preview Gambar Variant",
+   "options": "gambar_variant"
+  },
+  {
+   "depends_on": "eval:(doc.indexing_2 == \"0\"|| doc.indexing_2 === undefined)",
+   "fieldname": "gambar_variant",
+   "fieldtype": "Attach Image",
+   "label": "Gambar Variant"
+  },
+  {
+   "fieldname": "indexing_1",
+   "fieldtype": "Data",
+   "label": "Indexing 1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "indexing_2",
+   "fieldtype": "Data",
+   "label": "Indexing 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "product_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product ID"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-30 11:41:28.747587",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Table Gabung Variant Shopee",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

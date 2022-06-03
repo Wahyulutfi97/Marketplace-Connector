@@ -1,0 +1,128 @@
+{
+ "autoname": "field:logistic_id",
+ "creation": "2021-06-18 10:56:40.468667",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "logistic_id",
+  "name1",
+  "description",
+  "enabled",
+  "force_enabled",
+  "has_cod",
+  "mask_channel_id",
+  "weight_limit",
+  "item_max_dimention",
+  "preferred",
+  "volume_limit",
+  "sizes",
+  "fee_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "logistic_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Logistic ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Data",
+   "label": "Enabled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "force_enabled",
+   "fieldtype": "Data",
+   "label": "Force Enabled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "has_cod",
+   "fieldtype": "Data",
+   "label": "Has Cod",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mask_channel_id",
+   "fieldtype": "Data",
+   "label": "Mask Channel ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight_limit",
+   "fieldtype": "Data",
+   "label": "Weight Limit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_max_dimention",
+   "fieldtype": "Data",
+   "label": "Item Max Dimention",
+   "reqd": 1
+  },
+  {
+   "fieldname": "preferred",
+   "fieldtype": "Data",
+   "label": "Preferred",
+   "reqd": 1
+  },
+  {
+   "fieldname": "volume_limit",
+   "fieldtype": "Data",
+   "label": "Volume Limit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sizes",
+   "fieldtype": "Data",
+   "label": "Sizes"
+  },
+  {
+   "fieldname": "fee_type",
+   "fieldtype": "Data",
+   "label": "Fee Type"
+  }
+ ],
+ "modified": "2021-06-22 11:03:04.634161",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Logistic Shopee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "name1",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

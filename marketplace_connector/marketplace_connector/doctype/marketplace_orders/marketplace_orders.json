@@ -1,0 +1,220 @@
+{
+ "autoname": "field:order_id",
+ "creation": "2021-04-16 14:25:52.520596",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "marketplace",
+  "shop_name",
+  "shop_setting",
+  "order_id",
+  "order_status",
+  "status_sync",
+  "sinv_no",
+  "so_no",
+  "cancel_order",
+  "column_break_3",
+  "posting_date",
+  "days_to_ship",
+  "section_break_6",
+  "customer",
+  "customer_name",
+  "recipient_address",
+  "column_break_10",
+  "recipient_phone",
+  "recipient_city",
+  "note",
+  "section_break_14",
+  "items",
+  "currency",
+  "total_amount",
+  "section_break_18",
+  "shipping_carrier",
+  "estimated_shipping_fee",
+  "voucher_applied",
+  "additional_discount",
+  "tracking_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_id",
+   "fieldtype": "Data",
+   "label": "Order ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "order_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Order Status"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "days_to_ship",
+   "fieldtype": "Data",
+   "label": "Days to Ship"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "recipient_address",
+   "fieldtype": "Text",
+   "label": "Recipient Address"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "label": "Recipient Phone"
+  },
+  {
+   "fieldname": "recipient_city",
+   "fieldtype": "Data",
+   "label": "Recipient City"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Marketplace Orders Item"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shipping_carrier",
+   "fieldtype": "Data",
+   "label": "Shipping Carrier"
+  },
+  {
+   "fieldname": "estimated_shipping_fee",
+   "fieldtype": "Data",
+   "label": "Estimated Shipping Fee"
+  },
+  {
+   "fieldname": "voucher_applied",
+   "fieldtype": "Data",
+   "label": "Voucher Applied"
+  },
+  {
+   "fieldname": "additional_discount",
+   "fieldtype": "Data",
+   "label": "Additional Discount"
+  },
+  {
+   "fieldname": "tracking_no",
+   "fieldtype": "Data",
+   "label": "Tracking No"
+  },
+  {
+   "fieldname": "marketplace",
+   "fieldtype": "Data",
+   "label": "Marketplace"
+  },
+  {
+   "fieldname": "status_sync",
+   "fieldtype": "Select",
+   "label": "Status Sync",
+   "options": "\nBerhasil\nGagal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sinv_no",
+   "fieldtype": "Data",
+   "label": "SINV No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shop_setting",
+   "fieldtype": "Data",
+   "label": "Shop Setting",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.order_status == \"READY_TO_SHIP\"",
+   "fieldname": "cancel_order",
+   "fieldtype": "Button",
+   "label": "Cancel Order"
+  },
+  {
+   "fieldname": "so_no",
+   "fieldtype": "Data",
+   "label": "SO No",
+   "read_only": 1
+  }
+ ],
+ "modified": "2021-09-02 16:28:08.669392",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Marketplace Orders",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

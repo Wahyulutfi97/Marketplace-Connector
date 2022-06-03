@@ -1,0 +1,275 @@
+{
+ "allow_copy": 1,
+ "autoname": "field:store_name",
+ "creation": "2022-05-19 16:54:37.562590",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_sync",
+  "sb_general",
+  "store_name",
+  "shop_id",
+  "partner_id",
+  "partner_key",
+  "connection_status",
+  "column_break_6",
+  "redirect_url",
+  "generate_url_for_shop_id",
+  "url_shop_id",
+  "store_information_section",
+  "shop_name",
+  "sync_product",
+  "cbsn",
+  "shop_region",
+  "make_so",
+  "cbsr",
+  "shop_status",
+  "sb_other",
+  "warehouse",
+  "customer_group",
+  "column_break_9",
+  "create_new_item",
+  "default_uom",
+  "default_item_group",
+  "column_break_13",
+  "sync_berapa_hari",
+  "sb_accounting",
+  "tax_account",
+  "f_n_f_account",
+  "shipping_account",
+  "logistic_section",
+  "list_logistic",
+  "logistic_selected"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_sync",
+   "fieldtype": "Check",
+   "label": "Enable Sync"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "sb_general",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "store_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Store Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "shop_id",
+   "fieldtype": "Data",
+   "label": "Shop Id"
+  },
+  {
+   "default": "2000675",
+   "fieldname": "partner_id",
+   "fieldtype": "Data",
+   "label": "Partner Id"
+  },
+  {
+   "default": "f70b8705f55c2102d414a83bac61814626e3a288283bc84384246079c683881d",
+   "fieldname": "partner_key",
+   "fieldtype": "Data",
+   "label": "Partner Key"
+  },
+  {
+   "fieldname": "connection_status",
+   "fieldtype": "Data",
+   "label": "Connection Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "google.com",
+   "fieldname": "redirect_url",
+   "fieldtype": "Data",
+   "label": "Redirect URL"
+  },
+  {
+   "fieldname": "generate_url_for_shop_id",
+   "fieldtype": "Button",
+   "label": "Generate URL for Shop ID",
+   "options": "generate_url_for_shop_id"
+  },
+  {
+   "description": "copy dan paste URL di atas ke browser anda lalu ikuti langkah-langkahnya untuk melakukan konfirmasi / approval\ndan shop_id akan berada pada URL redirect yang anda inputkan setelah proses konfirmasi / approval berhasil",
+   "fieldname": "url_shop_id",
+   "fieldtype": "Text",
+   "label": "URL Shop ID",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "store_information_section",
+   "fieldtype": "Section Break",
+   "label": "Store Information"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sync_product",
+   "fieldtype": "Button",
+   "label": "sync product"
+  },
+  {
+   "fieldname": "cbsn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_region",
+   "fieldtype": "Data",
+   "label": "Shop Region",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "make_so",
+   "fieldtype": "Check",
+   "label": "Make SO"
+  },
+  {
+   "fieldname": "cbsr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_status",
+   "fieldtype": "Data",
+   "label": "Shop Status",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "sb_other",
+   "fieldtype": "Section Break",
+   "label": "Other Information"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "auto create item if didnt exist on erp",
+   "fieldname": "create_new_item",
+   "fieldtype": "Check",
+   "label": "Create New Item"
+  },
+  {
+   "depends_on": "eval:doc.create_new_item==1",
+   "fieldname": "default_uom",
+   "fieldtype": "Link",
+   "label": "Default UOM",
+   "options": "UOM"
+  },
+  {
+   "depends_on": "eval:doc.create_new_item==1",
+   "fieldname": "default_item_group",
+   "fieldtype": "Link",
+   "label": "Default Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "data yang diambil adalah x hari kebelakang",
+   "fieldname": "sync_berapa_hari",
+   "fieldtype": "Select",
+   "label": "Sync Berapa Hari",
+   "options": "1 hari\n2 hari\n3 hari"
+  },
+  {
+   "depends_on": "eval:doc.enable_sync==1",
+   "fieldname": "sb_accounting",
+   "fieldtype": "Section Break",
+   "label": "Accounting Information"
+  },
+  {
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "label": "Tax Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "f_n_f_account",
+   "fieldtype": "Link",
+   "label": "Freight and Forwarding Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "shipping_account",
+   "fieldtype": "Link",
+   "label": "Shipping Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "logistic_section",
+   "fieldtype": "Section Break",
+   "label": "Logistic"
+  },
+  {
+   "fieldname": "list_logistic",
+   "fieldtype": "Table",
+   "label": "List Logistic",
+   "options": "List Logistic Shopee"
+  },
+  {
+   "fieldname": "logistic_selected",
+   "fieldtype": "Long Text",
+   "label": "Logistic Selected",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "modified": "2022-05-19 16:54:37.562590",
+ "modified_by": "dev@wss.com",
+ "module": "Marketplace Connector",
+ "name": "Shopee Shop Setting Custom",
+ "owner": "dev@wss.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,61 @@
+{
+ "creation": "2021-04-16 14:21:12.227583",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_sku",
+  "item_name",
+  "variant",
+  "qty",
+  "price_list_rate",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_sku",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item SKU"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "variant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variant"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "price_list_rate",
+   "fieldtype": "Currency",
+   "label": "Price List Rate"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-16 14:21:12.227583",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Marketplace Orders Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

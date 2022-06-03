@@ -1,0 +1,64 @@
+{
+ "allow_copy": 1,
+ "creation": "2021-04-12 11:05:02.896553",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tanggal_sync",
+  "store_name",
+  "marketplace",
+  "sync_manual"
+ ],
+ "fields": [
+  {
+   "fieldname": "tanggal_sync",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Sync",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marketplace",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Marketplace",
+   "options": "Shopee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sync_manual",
+   "fieldtype": "Button",
+   "label": "Sync Manual",
+   "options": "sync_manual"
+  },
+  {
+   "fieldname": "store_name",
+   "fieldtype": "Link",
+   "label": "Store Name",
+   "options": "Shopee Shop Setting",
+   "reqd": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "modified": "2021-05-24 11:35:11.396237",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Sync Manual",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,107 @@
+{
+ "creation": "2021-08-30 09:00:05.733947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "discount_info_section",
+  "discount_name",
+  "discount_shopee_id",
+  "shop_name",
+  "date_start",
+  "time",
+  "date_end",
+  "end_time",
+  "add_discount",
+  "delete_discount",
+  "list_item_section",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "discount_name",
+   "fieldtype": "Data",
+   "label": "Discount Name"
+  },
+  {
+   "fieldname": "date_start",
+   "fieldtype": "Date",
+   "label": "Date Start"
+  },
+  {
+   "fieldname": "date_end",
+   "fieldtype": "Date",
+   "label": "Date End"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Item Discount"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Link",
+   "label": "Shop Name",
+   "options": "Shopee Shop Setting"
+  },
+  {
+   "fieldname": "discount_shopee_id",
+   "fieldtype": "Data",
+   "label": "Discount Shopee Id"
+  },
+  {
+   "fieldname": "discount_info_section",
+   "fieldtype": "Section Break",
+   "label": "<b>Discount Info</b>"
+  },
+  {
+   "fieldname": "list_item_section",
+   "fieldtype": "Section Break",
+   "label": "<b>List Item</b>"
+  },
+  {
+   "fieldname": "add_discount",
+   "fieldtype": "Button",
+   "label": "Add/Update Discount"
+  },
+  {
+   "fieldname": "delete_discount",
+   "fieldtype": "Button",
+   "label": "Delete Discount"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  }
+ ],
+ "modified": "2021-09-02 10:26:11.303462",
+ "modified_by": "Administrator",
+ "module": "Marketplace Connector",
+ "name": "Discount Shopee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

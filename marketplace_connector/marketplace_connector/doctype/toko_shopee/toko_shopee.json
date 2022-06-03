@@ -1,0 +1,30 @@
+{
+ "creation": "2021-07-21 10:57:09.160218",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "list_toko"
+ ],
+ "fields": [
+  {
+   "fieldname": "list_toko",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "List Toko",
+   "options": "Shopee Shop Setting",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2022-05-19 18:08:48.264195",
+ "modified_by": "dev@wss.com",
+ "module": "Marketplace Connector",
+ "name": "Toko Shopee",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
